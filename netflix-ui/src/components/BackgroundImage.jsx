@@ -10,4 +10,11 @@ export default function BackgroundImage() {
   );
 }
 
-const Container = styled.div``;
+const Container = styled.div`
+  height: 100v;
+  width: 100wh;
+  img {
+    height: 100vh;
+    width: 100wh;
+  }
+`;

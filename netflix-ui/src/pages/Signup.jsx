@@ -27,4 +27,5 @@ export default function Signup() {
   );
 }
 
-const Container = styled.div``;
+const Container = styled.div`
+`;
