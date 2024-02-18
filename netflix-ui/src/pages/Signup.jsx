@@ -16,6 +16,11 @@ export default function Signup() {
             Ready to watch? Enter your email to create or restart membership
           </h6>
         </div>
+        <div className="form">
+          <input type="email" placeholder="Emial Address" name="email" />
+          <input type="password" placeholder="Password" name="password" />
+          <button>Get started</button>
+        </div>
       </div>
     </Container>
   );
