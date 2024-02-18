@@ -21,6 +21,7 @@ export default function Signup() {
           <input type="password" placeholder="Password" name="password" />
           <button>Get started</button>
         </div>
+        <button>Login</button>
       </div>
     </Container>
   );
