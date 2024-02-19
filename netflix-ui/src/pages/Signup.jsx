@@ -7,14 +7,14 @@ export default function Signup() {
   return (
     <Container>
       <BackgroundImage />
-      <Header />
       <div className="content">
+        <Header login />
         <div className="body flex column a-center j-center">
           <div className="text flex column">
             <h1>Unlimited movies, TV shows and more</h1>
             <h4>Watch anywhere. Cancel anytime.</h4>
             <h6>
-              Ready to watch? Enter your email to create or restart membership
+              Ready to watch? Enter your email to create or restart membership!
             </h6>
           </div>
           <div className="form">
@@ -50,6 +50,7 @@ const Container = styled.div`
           padding: 0 25rem;
         }
       }
+
       .form {
         display: grid;
         grid-template-columns: ${({ showPassword }) =>
