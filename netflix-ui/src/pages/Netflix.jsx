@@ -29,6 +29,11 @@ const Netflix = () => {
           <div className="buttons flex">
             <button className="flex j-center a-center">
               <FaPlay />
+              Play
+            </button>
+            <button className="flex j-center a-center">
+              <AiOutlineInfoCircle />
+              More Info
             </button>
           </div>
         </div>
