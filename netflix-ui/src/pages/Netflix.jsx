@@ -50,4 +50,8 @@ background-color: black;
     .background-image {
       filter: brightness(60%);
     }
+    img {
+      height: 100vh;
+      width: 100vw;
+    }
 `;
