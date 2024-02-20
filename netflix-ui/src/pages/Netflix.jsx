@@ -54,4 +54,14 @@ background-color: black;
       height: 100vh;
       width: 100vw;
     }
+    .container {
+      position: absolute;
+      bottom: 5rem;
+      .logo {
+        img {
+          width: 100%;
+          height: 100%;
+          margin-left: 5rem;
+        }
+      }
 `;
