@@ -23,7 +23,14 @@ const Netflix = () => {
           className="background-image"
         />
         <div className="container">
-          <div className="logo"></div>
+          <div className="logo">
+            <img src={MovieLogo} alt="Movie Logo" />
+          </div>
+          <div className="buttons flex">
+            <button className="flex j-center a-center">
+              <FaPlay />
+            </button>
+          </div>
         </div>
       </div>
     </div>
