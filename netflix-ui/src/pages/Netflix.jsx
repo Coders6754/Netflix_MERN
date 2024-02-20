@@ -64,4 +64,20 @@ background-color: black;
           margin-left: 5rem;
         }
       }
+      .buttons {
+        margin: 5rem;
+        gap: 2rem;
+        button {
+          font-size: 1.4rem;
+          gap: 1rem;
+          border-radius: 0.2rem;
+          padding: 0.5rem;
+          padding-left: 2rem;
+          padding-right: 2.4rem;
+          border: none;
+          cursor: pointer;
+          transition: 0.2s ease-in-out;
+          &:hover {
+            opacity: 0.8;
+          }
 `;
