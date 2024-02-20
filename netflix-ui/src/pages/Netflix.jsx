@@ -44,7 +44,7 @@ export default function Netflix() {
 }
 
 const Container = styled.div`
-background-color: black;
+  background-color: black;
   .hero {
     position: relative;
     .background-image {
@@ -80,4 +80,16 @@ background-color: black;
           &:hover {
             opacity: 0.8;
           }
+          &:nth-of-type(2) {
+            background-color: rgba(109, 109, 110, 0.7);
+            color: white;
+            
+            svg {
+              font-size: 1.8rem;
+            }
+          }
+        }
+      }
+    }
+  }
 `;
