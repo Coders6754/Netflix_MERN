@@ -129,4 +129,17 @@ const Container = styled.div`
             font-size: 1.2rem;
           }
         }
+        input {
+          width: 0;
+          opacity: 0;
+          visibility: hidden;
+          transition: 0.3s ease-in-out;
+          background-color: transparent;
+          border: none;
+          color: white;
+          &:focus {
+            outline: none;
+          }
+        }
+      }
 `;
