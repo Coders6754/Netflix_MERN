@@ -5,9 +5,12 @@ import MovieLogo from "../assets/homeTitle.webp";
 import { FaPlay } from "react-icons/fa";
 import { AiOutlineInfoCircle } from "react-icons/ai";
 import styled from "styled-components";
+import { useNavigate } from "react-router-dom";
 
 export default function Netflix() {
   const [isScrolled, setIsScrolled] = useState(false);
+
+  const navigate = useNavigate();
 
   window.onscroll = () => {
     setIsScrolled(window.scrollY === 0 ? false : true);
@@ -28,7 +31,10 @@ export default function Netflix() {
             <img src={MovieLogo} alt="Movie Logo" />
           </div>
           <div className="buttons flex">
-            <button className="flex j-center a-center">
+            <button
+              className="flex j-center a-center"
+              onClick={() => navigate("/player")}
+            >
               <FaPlay />
               Play
             </button>
@@ -83,7 +89,7 @@ const Container = styled.div`
           &:nth-of-type(2) {
             background-color: rgba(109, 109, 110, 0.7);
             color: white;
-            
+
             svg {
               font-size: 1.8rem;
             }
