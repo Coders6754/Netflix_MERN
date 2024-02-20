@@ -111,4 +111,22 @@ const Container = styled.div`
           font-size: 1.2rem;
         }
       }
+      .search {
+        display: flex;
+        gap: 0.4rem;
+        align-items: center;
+        justify-content: center;
+        padding: 0.2rem;
+        padding-left: 0.5rem;
+        button {
+          background-color: transparent;
+          border: none;
+          &:focus {
+            outline: none;
+          }
+          svg {
+            color: white;
+            font-size: 1.2rem;
+          }
+        }
 `;
