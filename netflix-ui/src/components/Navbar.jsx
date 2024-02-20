@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import logo from "../assets/logo.png";
 import { Link } from "react-router-dom";
-import { FaSearch } from "react-icons/fa";
+import { FaPowerOff, FaSearch } from "react-icons/fa";
+import { signOut } from "firebase/auth";
+import { firebaseAuth } from "../utils/firebase-config";
 
 export default function Navbar({ isScrolled }) {
   const links = [
@@ -23,7 +25,7 @@ export default function Navbar({ isScrolled }) {
             <img src={logo} alt="logo" />
           </div>
           <ul className="links flex">
-            {links.map((name, link) => {
+            {links.map(({ name, link }) => {
               return (
                 <li key={name}>
                   <Link to={link}>{name}</Link>
@@ -53,9 +55,60 @@ export default function Navbar({ isScrolled }) {
               }}
             />
           </div>
+          <button onClick={() => signOut(firebaseAuth)}>
+            <FaPowerOff />
+          </button>
         </div>
       </nav>
     </Container>
   );
 }
-const Container = styled.div``;
+const Container = styled.div`
+  .scrolled {
+    background-color: black;
+  }
+  nav {
+    position: sticky;
+    top: 0;
+    height: 6.5rem;
+    width: 100%;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    padding: 0 4rem;
+    align-items: center;
+    transition: 0.3s ease-in-out;
+    .left {
+      gap: 2rem;
+      .brand {
+        img {
+          height: 4rem;
+        }
+      }
+      .links {
+        list-style-type: none;
+        gap: 2rem;
+        li {
+          a {
+            color: white;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+    .right {
+      gap: 1rem;
+      button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        &:focus {
+          outline: none;
+        }
+        svg {
+          color: #f34242;
+          font-size: 1.2rem;
+        }
+      }
+`;
