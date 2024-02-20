@@ -4,8 +4,9 @@ import backgroundImage from "../assets/home.jpg";
 import MovieLogo from "../assets/homeTitle.webp";
 import { FaPlay } from "react-icons/fa";
 import { AiOutlineInfoCircle } from "react-icons/ai";
+import styled from "styled-components";
 
-const Netflix = () => {
+export default function Netflix() {
   const [isScrolled, setIsScrolled] = useState(false);
 
   window.onscroll = () => {
@@ -14,7 +15,7 @@ const Netflix = () => {
   };
 
   return (
-    <div>
+    <Container>
       <Navbar isScrolled={isScrolled} />
       <div className="hero">
         <img
@@ -38,8 +39,15 @@ const Netflix = () => {
           </div>
         </div>
       </div>
-    </div>
+    </Container>
   );
-};
+}
 
-export default Netflix;
+const Container = styled.div`
+background-color: black;
+  .hero {
+    position: relative;
+    .background-image {
+      filter: brightness(60%);
+    }
+`;
